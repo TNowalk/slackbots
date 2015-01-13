@@ -5,10 +5,10 @@ module.exports = function (req, res, next) {
   var url = 'http://api.wordnik.com/v4/word.json/';
   var endpoint = '/definitions/';
 
-  var text = req.body.text;
+  var origText = req.body.text;
   var userName = req.body.user_name;
 
-  text = text.replace(' ', '%20');
+  text = origText.replace(' ', '%20');
 
   var path = url + text + endpoint + '?api_key=' + apiKey;
 
@@ -20,14 +20,14 @@ module.exports = function (req, res, next) {
     if (!error && response.statusCode == 200) {
       if (body.length > 0) {
         var definition = body[0];
-        botPayload.text = text + ' (' + definition.partOfSpeech + '): ' +
+        botPayload.text = origText + ' (' + definition.partOfSpeech + '): ' +
           definition.text + definition.attributionText +
           ' (<http://www.wordnik.com/words/' + text + '|Powered by Wordnik)>';
       } else {
-        botPayload.text = 'Could not find definition for ' + text;
+        botPayload.text = 'Could not find definition for ' + origText;
       }
     } else {
-      botPayload.text = 'Error occured while defining ' + text;
+      botPayload.text = 'Error occured while defining ' + origText;
     }
 
     if (userName !== 'slackbot') {

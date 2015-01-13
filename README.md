@@ -44,7 +44,7 @@ The `POST /define` endpoint allows you to retrieve the definition of the supplie
 Note: To use this API, you must signup for an API key at Wordnik here http://developer.wordnik.com/
 
 ##### Example
-curl -X POST --data "user_name=Steve&text=bluebird" http://localhost:3000/define
+`curl -X POST --data "user_name=Steve&text=bluebird" http://localhost:3000/define`
 
 ##### Output
 ```
