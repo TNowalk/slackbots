@@ -31,7 +31,7 @@ module.exports = function (req, res, next) {
     }
 
     if (userName !== 'slackbot') {
-      return res.status(200).json(botPayload);
+      return res.status(200).send(botPayload.text);
     } else {
       return res.status(200).end();
     }

@@ -39,16 +39,14 @@ The response from the endpoint should simply respond with that text that is to b
 
 #### Define
 
-The `/define` endpoint allows you to retrieve the definition of the supplied word
+The `POST /define` endpoint allows you to retrieve the definition of the supplied word
 
 Note: To use this API, you must signup for an API key at Wordnik here http://developer.wordnik.com/
 
 ##### Example
 curl -X POST --data "user_name=Steve&text=bluebird" http://localhost:3000/define
 
-##### Output:
+##### Output
 ```
-{
-    "text":"bluebird (noun): Any of several North American songbirds of the genus Sialia, having blue plumage and usually a rust-colored breast in the male.from The American Heritage® Dictionary of the English Language, 4th Edition (<http://www.wordnik.com/words/bluebird|Powered by Wordnik)>"
-}
+bluebird (noun): Any of several North American songbirds of the genus Sialia, having blue plumage and usually a rust-colored breast in the male.from The American Heritage® Dictionary of the English Language, 4th Edition (<http://www.wordnik.com/words/bluebird|Powered by Wordnik)>
 ```
