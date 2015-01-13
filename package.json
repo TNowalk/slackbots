@@ -1,0 +1,14 @@
+{
+  "name": "define-bot",
+  "version": "0.0.1",
+  "description": "Slack integration to retrieve definitions of words",
+  "main": "app.js",
+  "scripts": {},
+  "author": "Trevor Nowalk <trevor.nowalk@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.x.x",
+    "body-parser": "^1.x.x",
+    "request": "^2.51.0"
+  }
+}
