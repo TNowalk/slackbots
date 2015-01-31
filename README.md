@@ -75,4 +75,19 @@ Price: $117.16, Change: -1.74 (-1.46%)
 ```
 
 ##### Preview
-![Define Preview](https://raw.githubusercontent.com/TNowalk/slackbots/master/assets/stock-output.png "Define Preview")
+![Stocks Preview](https://raw.githubusercontent.com/TNowalk/slackbots/master/assets/stock-output.png "Stocks Preview")
+
+#### GoTo
+
+The `POST /goto` endpoint is an attempt to port the functionality of the Sublime Text GoTo documentation plugin (https://github.com/kemayo/sublime-text-2-goto-documentation).  The only difference is that this endpoint returns the link as I can't launch the browser via Slack.
+
+##### Example
+`curl -X POST --data "user_name=Steve&text=js split" http://localhost:3000/goto`
+
+##### Output
+```
+<https://developer.mozilla.org/en-US/search?q=split&topic=js>
+```
+
+##### Preview
+![GoTo Preview](https://raw.githubusercontent.com/TNowalk/slackbots/master/assets/goto-output.png "GoTo Preview")
