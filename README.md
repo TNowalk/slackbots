@@ -45,6 +45,8 @@ The `POST /define` endpoint allows you to retrieve the definition of the supplie
 
 Note: To use this API, you must signup for an API key at Wordnik here http://developer.wordnik.com/.  The API key should be set in an environment variable called `WORDNIK_API_KEY`.
 
+The endoint expects `text` to be at least one word, to look up a word a user would type `/define bluebird` into Slack.
+
 ##### Example
 `curl -X POST --data "user_name=Steve&text=bluebird" http://localhost:3000/define`
 
@@ -62,7 +64,7 @@ The `POST /stocks` endpoint allows you to retrieve the current price of the supp
 
 Note: To use this API, you must signup for an auth token at Quandl here https://www.quandl.com/.  The toekn should be set in an environment variable called `QUANDL_AUTH_TOKEN`.
 
-As of right now, this endpoint expects `text` to be a symbol to look up.  I may end up adding some sort of "AI" via some Natural Language Processing to detect things like `/stocks price change for aapl over 7 days`.  We'll see how complicated I want to get with it.
+As of right now, this endpoint expects `text` to be a symbol to look up.  I may end up adding some sort of "AI" via some Natural Language Processing to detect things like `/stocks price change for aapl over 7 days`.  We'll see how complicated I want to get with it.  But for now, to look up a stock a user would type `/stocks aapl` into Slack.
 
 ##### Example
 `curl -X POST --data "user_name=Steve&text=aapl" http://localhost:3000/stock`
@@ -80,6 +82,8 @@ Price: $117.16, Change: -1.74 (-1.46%)
 #### GoTo
 
 The `POST /goto` endpoint is an attempt to port the functionality of the Sublime Text GoTo documentation plugin (https://github.com/kemayo/sublime-text-2-goto-documentation).  The only difference is that this endpoint returns the link as I can't launch the browser via Slack.
+
+The endpoint expects `text` to follow a format of `[language] [query]`, for example to get a link to the JavaScript `split` function, a user would type `/goto js split` into Slack.
 
 ##### Example
 `curl -X POST --data "user_name=Steve&text=js split" http://localhost:3000/goto`

@@ -27,7 +27,8 @@ var docs = {
   "less": "http://devdocs.io/#q=less+{query}",
   "google": "https://google.com/search?q={query}",
   "python": "http://docs.python.org/3/search.html?q={query}",
-  "lmgtfy": "http://lmgtfy.com/?q={query}"
+  "lmgtfy": "http://lmgtfy.com/?q={query}",
+  "jquery": "http://api.jquery.com/{query}/"
 };
 
 module.exports = function (req, res, next) {
@@ -37,7 +38,7 @@ module.exports = function (req, res, next) {
 
   var input = origText.split(' ');
 
-  if (input.length < 2 && input[0] !== 'lmgtfy' && input[0] !== 'google') {
+  if (input.length < 2) {
     return res.status(200).send('A language and query is required');
   }
 
