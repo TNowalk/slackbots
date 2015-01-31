@@ -2,6 +2,11 @@ var request = require('request');
 
 module.exports = function (req, res, next) {
   var apiKey = process.env.WORDNIK_API_KEY;
+
+  if (!apiKey) {
+    return res.status(200).send({text: 'Invalid API key'});
+  }
+
   var url = 'http://api.wordnik.com/v4/word.json/';
   var endpoint = '/definitions/';
 
