@@ -53,6 +53,9 @@ Note: To use this API, you must signup for an API key at Wordnik here http://dev
 bluebird (noun): Any of several North American songbirds of the genus Sialia, having blue plumage and usually a rust-colored breast in the male.from The American Heritage® Dictionary of the English Language, 4th Edition (<http://www.wordnik.com/words/bluebird|Powered by Wordnik)>
 ```
 
+##### Preview
+![Define Preview](https://raw.githubusercontent.com/TNowalk/slackbots/master/assets/define-output.png "Define Preview");
+
 #### Stocks
 
 The `POST /stocks` endpoint allows you to retrieve the current price of the supplied symbol
@@ -70,3 +73,6 @@ As of right now, this endpoint expects `text` to be a symbol to look up.  I may 
 AAPL - _Updated 5 hours ago_
 Price: $117.16, Change: -1.74 (-1.46%)
 ```
+
+##### Preview
+![Define Preview](https://raw.githubusercontent.com/TNowalk/slackbots/master/assets/stock-output.png "Define Preview");
