@@ -54,7 +54,7 @@ bluebird (noun): Any of several North American songbirds of the genus Sialia, ha
 ```
 
 ##### Preview
-![Define Preview](https://raw.githubusercontent.com/TNowalk/slackbots/master/assets/define-output.png "Define Preview");
+![Define Preview](https://raw.githubusercontent.com/TNowalk/slackbots/master/assets/define-output.png "Define Preview")
 
 #### Stocks
 
@@ -75,4 +75,4 @@ Price: $117.16, Change: -1.74 (-1.46%)
 ```
 
 ##### Preview
-![Define Preview](https://raw.githubusercontent.com/TNowalk/slackbots/master/assets/stock-output.png "Define Preview");
+![Define Preview](https://raw.githubusercontent.com/TNowalk/slackbots/master/assets/stock-output.png "Define Preview")
