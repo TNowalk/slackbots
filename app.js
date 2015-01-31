@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var definebot = require('./definebot');
+var defineBot = require('./define');
+var stocksBot = require('./stocks');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -21,4 +22,5 @@ app.listen(port, function () {
   console.log('Slack bot listening on port ' + port);
 });
 
-app.post('/define', definebot);
+app.post('/define', defineBot);
+app.post('/stock', stocksBot);

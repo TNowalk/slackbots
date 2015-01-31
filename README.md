@@ -52,3 +52,21 @@ Note: To use this API, you must signup for an API key at Wordnik here http://dev
 ```
 bluebird (noun): Any of several North American songbirds of the genus Sialia, having blue plumage and usually a rust-colored breast in the male.from The American Heritage® Dictionary of the English Language, 4th Edition (<http://www.wordnik.com/words/bluebird|Powered by Wordnik)>
 ```
+
+#### Stocks
+
+The `POST /stocks` endpoint allows you to retrieve the current price of the supplied symbol
+
+Note: To use this API, you must signup for an auth token at Quandl here https://www.quandl.com/.  The toekn should be set in an environment variable called `QUANDL_AUTH_TOKEN`.
+
+As of right now, this endpoint expects `text` to be a symbol to look up.  I may end up adding some sort of "AI" via some Natural Language Processing to detect things like `/stocks price change for aapl over 7 days`.  We'll see how complicated I want to get with it.
+
+##### Example
+`curl -X POST --data "user_name=Steve&text=aapl" http://localhost:3000/stock`
+
+##### Output
+```
+*Apple Inc. (AAPL)*
+AAPL - _Updated 5 hours ago_
+Price: $117.16, Change: -1.74 (-1.46%)
+```
