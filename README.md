@@ -35,13 +35,15 @@ Slack is a pretty awesome tool and they really offer a ton of options to integra
 
 The response from the endpoint should simply respond with that text that is to be sent back to the user who executed the command.
 
+To set up a new slash command, you must be an admin of your Slack group.  Head here => https://<your-slack-group>.slack.com/services/new and find the Slash Commands integration, click the Add button.  The command name can be whatever you like, the URL should point to your server and the appropriate endpoint and the Method should match the method defeind for the endpoint.  The rest of the configs should be self explanatory.
+
 ### Endpoints
 
 #### Define
 
 The `POST /define` endpoint allows you to retrieve the definition of the supplied word
 
-Note: To use this API, you must signup for an API key at Wordnik here http://developer.wordnik.com/
+Note: To use this API, you must signup for an API key at Wordnik here http://developer.wordnik.com/.  The API key should be set in an environment variable called `WORDNIK_API_KEY`.
 
 ##### Example
 `curl -X POST --data "user_name=Steve&text=bluebird" http://localhost:3000/define`
