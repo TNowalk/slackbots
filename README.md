@@ -100,6 +100,8 @@ The endpoint expects `text` to follow a format of `[language] [query]`, for exam
 
 The `POST /youtube` endpoint is an attempt to create something similar to the `/gifphy` integration.  There isn't a true way to grab a random video from YouTube as of right now, so to make it seem like it's random the server will grab the 100 most relevant videos for a search query and return a random one of those.
 
+Note: To use this API, you must register your app with Google and request an API key to the YouTube API (v3).  The toekn should be set in an environment variable called `YOUTUBE_API_KEY`.
+
 ##### TODO
 Set this up to push to an incoming hook.  Right now the link is returned to the calling user as a private message.  The thought here is that you can set up an incoming hook that this endpoint would push the youtube link to which would blast the channel that it was originated from.
 
