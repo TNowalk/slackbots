@@ -4,6 +4,8 @@ var defineBot = require('./define');
 var stocksBot = require('./stocks');
 var gotoBot = require('./goto');
 var youtube = require('./youtube');
+var fs = require('fs');
+var md = require('marked');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -12,7 +14,26 @@ var port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // test route
-app.get('/', function (req, res) { res.status(200).send('Hello world!'); });
+app.get('/', function (req, res) {
+  console.log('this is a test');
+  fs.readFile('./README.md', 'utf8', function(err, data) {
+    var html = '<!doctype html>' +
+               '<html>' +
+               '<head>' +
+                 '<meta charset="utf-8"/>' +
+                 '<titleSlackbots</title>' +
+                  '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">' +
+                  '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">' +
+               '</head>' +
+               '<body>' +
+                 '<div class="container">' +
+                   md(data) +
+                 '</div>' +
+               '</body>' +
+               '</html>';
+    res.status(200).send(html);
+  });
+});
 
 // error handler
 app.use(function (err, req, res, next) {
