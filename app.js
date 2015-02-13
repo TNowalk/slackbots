@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var defineBot = require('./define');
 var stocksBot = require('./stocks');
 var gotoBot = require('./goto');
+var youtube = require('./youtube');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -26,3 +27,4 @@ app.listen(port, function () {
 app.post('/define', defineBot);
 app.post('/stock', stocksBot);
 app.post('/goto', gotoBot);
+app.post('/youtube', youtube);

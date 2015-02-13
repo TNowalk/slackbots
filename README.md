@@ -95,3 +95,18 @@ The endpoint expects `text` to follow a format of `[language] [query]`, for exam
 
 ##### Preview
 ![GoTo Preview](https://raw.githubusercontent.com/TNowalk/slackbots/master/assets/goto-output.png "GoTo Preview")
+
+#### YouTube
+
+The `POST /youtube` endpoint is an attempt to create something similar to the `/gifphy` integration.  There isn't a true way to grab a random video from YouTube as of right now, so to make it seem like it's random the server will grab the 100 most relevant videos for a search query and return a random one of those.
+
+##### Example
+`curl -X POST --data "user_name=Steve&text=prelude in c" http://localhost:3000/youtube`
+
+##### Output
+```
+<https://www.youtube.com/watch?v=d-qwJoFQ3qo>
+```
+
+##### Preview
+Coming after I can test
