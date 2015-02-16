@@ -39,8 +39,8 @@ To set up a new slash command, you must be an admin of your Slack group.  Head h
 
 ### TODO
 Some potential ideas:
-[ ] - Polling feature using team_id, perhaps something like `/poll [poll name] [comma separated list of options]`.  Then to vote, `/vote [poll name] [choice]`
-[ ] - Kudos feature usin team_id and user_id, thinking something like `/kudos [username] [amount]` to give kudos, `/kudos [username]` to see that users rep and `/kudos` for a list of the top 10 rep
+- [ ] - Polling feature using team_id, perhaps something like `/poll [poll name] [comma separated list of options]`.  Then to vote, `/vote [poll name] [choice]`
+- [ ] - Kudos feature usin team_id and user_id, thinking something like `/kudos [username] [amount]` to give kudos, `/kudos [username]` to see that users rep and `/kudos` for a list of the top 10 rep
 
 ### Endpoints
 
