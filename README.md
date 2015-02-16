@@ -37,6 +37,11 @@ The response from the endpoint should simply respond with that text that is to b
 
 To set up a new slash command, you must be an admin of your Slack group.  Head here => https://YOUR_SLACK_GROUP.slack.com/services/new and find the Slash Commands integration, click the Add button.  The command name can be whatever you like, the URL should point to your server and the appropriate endpoint and the Method should match the method defeind for the endpoint.  The rest of the configs should be self explanatory.
 
+### TODO
+Some potential ideas:
+[ ] - Polling feature using team_id, perhaps something like `/poll [poll name] [comma separated list of options]`.  Then to vote, `/vote [poll name] [choice]`
+[ ] - Kudos feature usin team_id and user_id, thinking something like `/kudos [username] [amount]` to give kudos, `/kudos [username]` to see that users rep and `/kudos` for a list of the top 10 rep
+
 ### Endpoints
 
 #### Define
