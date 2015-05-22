@@ -1,11 +1,14 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var fs = require('fs');
+var md = require('marked');
+
 var defineBot = require('./define');
 var stocksBot = require('./stocks');
 var gotoBot = require('./goto');
 var youtube = require('./youtube');
-var fs = require('fs');
-var md = require('marked');
+// var poll = require('./poll');
+var jira = require('./jira');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -49,3 +52,5 @@ app.post('/define', defineBot);
 app.post('/stock', stocksBot);
 app.post('/goto', gotoBot);
 app.post('/youtube', youtube);
+// app.post('/poll', poll);
+app.post('/jira', jira);
